@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    href="image/kisspng-service-brand-company-clip-art-food-contact-us-pinku-gupta-cook-and-caters-5ba310e55a0208.9707600315374133493687.png">
   <!-- Link To css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- Link To Font Awesome -->
@@ -12,10 +14,10 @@
 </head>
 
 <body>
+  <button class="re-home" onclick="scrollToElement()"><i class="fa-solid fa-arrow-up"></i></button>
   <!-- Hero Section -->
-
   <div class="hero-bg">
-    <div class="nav-contact"></div>
+    <div class="nav-contact" id="targetElement"></div>
     <div class="hero-bg-filter">
       <!-- Nav Bar -->
       <nav class="nav-bar">
@@ -55,15 +57,83 @@
         <div class="hero-left">
           <h1 class="main-font">Enjoy Our <br>
             Delicious Meal</h1>
-            <p class="main-font">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-            <button class="main-font">BOOK A TABLE</button>
+          <p class="main-font">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+            Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+          <button class="main-font">BOOK A TABLE</button>
         </div>
         <div class="hero-right">
           <img src="image/hero.png" alt="hero img">
+
         </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Card Section -->
+  <div class="container-fluid card">
+    <div class="container card-boxes">
+      <div class="card-box">
+        <span><i class="fa-solid fa-user-tie"></i></span>
+        <h4 class="main-font">Master Chefs</h4>
+        <p class="main-font">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+      </div>
+      <div class="card-box">
+        <span><i class="fa-solid fa-utensils"></i></span>
+        <h4 class="main-font">Quality Food</h4>
+        <p class="main-font">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+      </div>
+      <div class="card-box">
+        <span><i class="fa-solid fa-cart-plus"></i></span>
+        <h4 class="main-font">Online Order</h4>
+        <p class="main-font">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+      </div>
+      <div class="card-box">
+        <span><i class="fa-solid fa-headset"></i></span>
+        <h4 class="main-font">24/7 Service</h4>
+        <p class="main-font">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
       </div>
     </div>
   </div>
+  <!-- About Section -->
+  <div class="about container-fluid">
+    <div class="container about-section">
+      <div class="about-left">
+        <img src="image/about-1.jpg" alt="" class="about-img-1">
+        <img src="image/about-2.jpg" alt="" class="about-img-2">
+        <img src="image/about-3.jpg" alt="" class="about-img-3">
+        <img src="image/about-4.jpg" alt="" class="about-img-4">
+      </div>
+      <div class="about-right">
+        <div class="secondary-title special-font">About Us</div>
+        <h2 class="main-font">Welcome to <span><i class="fa-solid fa-utensils"></i></span> Restoran</h2>
+        <p class="main-font">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos
+          erat ipsum et lorem et sit, sed stet lorem sit.</p>
+        <p class="main-font">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+          Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+        <div class="number-section">
+          <div class="number">
+            <h4 class="main-font">15</h4>
+            <div>
+              <h6 class="main-font">Years of</h6>
+              <h5 class="main-font">EXPERIENCE</h5>
+            </div>
+          </div>
+          <div class="number">
+            <h4 class="main-font">50</h4>
+            <div>
+              <h6 class="main-font">Popular</h6>
+              <h5 class="main-font">MASTER CHEFS</h5>
+            </div>
+          </div>
+        </div>
+        <button class="main-font">READ MORE</button>
+      </div>
+    </div>
+  </div>
+
+
+
 
   <!-- Link to js -->
   <script src="js/script.js"></script>

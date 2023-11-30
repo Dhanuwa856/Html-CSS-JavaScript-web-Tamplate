@@ -14,6 +14,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -46,6 +47,40 @@ li {
 img {
   width: 100%;
 }
+
+.container-fluid {
+  width: 100%;
+  max-width: 1468px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* re-home button  */
+.re-home {
+  position: sticky;
+  left: 90%;
+  top: 85%;
+  z-index: 20;
+  float: left;
+  color: var(--light-color);
+  background: rgba(255, 162, 23, 0.9);
+  font-size: 20px;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  /* display: none; */
+  transform: translateY(100px);
+  border-radius: 6px;
+  opacity: 0;
+  transition: 1s;
+
+}
+
+
 
 /* Hero section */
 .hero-bg {
@@ -82,6 +117,8 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
+  transition: 1s;
+  position: relative;
 }
 
 .nav-menu {
@@ -144,6 +181,8 @@ nav {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 6px;
+
 }
 
 .dropdown-content a {
@@ -219,6 +258,7 @@ nav {
     padding-right: 30px;
     padding-bottom: 20px;
     z-index: 10;
+    transition: 1.5s;
   }
 
   .nav-menu-link ul {
@@ -242,7 +282,8 @@ nav {
 
 
 }
-.fixed{
+
+.fixed {
   background: var(--dark-color);
   padding-top: 10px;
   padding-bottom: 10px;
@@ -250,33 +291,40 @@ nav {
   top: 0;
   transition: 1s ease-out;
   z-index: 100;
+
 }
+
 /* Navbar End */
 
 /* Hero */
-.hero{
+.hero {
   display: flex;
   justify-content: space-between;
   gap: 40px;
- 
+  position: relative;
+
 }
-.hero-left{
+
+.hero-left {
   width: 50%;
   margin-top: 200px;
 }
-.hero-left h1{
+
+.hero-left h1 {
   color: var(--light-color);
   font-weight: 800;
   font-size: 70px;
   line-height: 70px;
 }
-.hero-left p{
+
+.hero-left p {
   margin-top: 20px;
   color: var(--light-color);
   font-weight: 600;
   font-size: 17px;
 }
-.hero-left button{
+
+.hero-left button {
   margin-top: 40px;
   background: var(--primary-color);
   color: var(--light-color);
@@ -288,49 +336,278 @@ nav {
   border-radius: 2px;
   cursor: pointer;
 }
-.hero-left button:hover{
+
+.hero-left button:hover {
   background: #ffb039;
   color: #fff;
   transition: 1s;
 }
-.hero-right{
+
+.hero-right {
   margin-top: 100px;
   width: 50%;
 }
-.hero-right img{
-  animation: imgRotate 75s linear infinite ;
-  
+
+.hero-right img {
+  animation: imgRotate 75s linear infinite;
+
 }
+
 @keyframes imgRotate {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  50%{
+
+  50% {
     transform: rotate(180deg);
   }
-  100%{
+
+  100% {
     transform: rotate(360deg);
   }
 }
+
 @media screen and (max-width:1000px) {
-  .hero{
+  .hero {
     flex-direction: column-reverse;
-   
+
   }
-  .hero-right{
+
+  .hero-right {
     width: 100%;
   }
-  .hero-right img{
+
+  .hero-right img {
     width: 60%;
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
-  .hero-left{
+
+  .hero-left {
     margin-top: 20px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+
+}
+
+/* End Hero */
+
+/* Card Section */
+
+.card {
+  margin-top: 70px;
+}
+
+.card-boxes {
+  display: grid;
+  /* width: 100%; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card-boxes .card-box {
+  width: 100%;
+}
+
+.card-box .fa-solid {
+  color: var(--primary-color);
+  font-size: 50px;
+}
+
+.card-box h4 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 800;
+
+}
+
+.card-box p {
+  color: #777;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.card-box {
+  background: #fff;
+  box-shadow: 0px -5px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  padding: 25px 0px 35px 25px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.card-box:hover {
+  background: var(--primary-color);
+  transition: 1s;
+}
+
+.card-box:hover.card-box .fa-solid {
+  color: var(--light-color);
+  transition: 1s;
+}
+
+.card-box:hover.card-box h4 {
+  color: var(--light-color);
+  transition: 1s;
+}
+
+.card-box:hover.card-box p {
+  color: var(--light-color);
+  transition: 1s;
+}
+
+@media screen and (max-width:1000px) {
+  .card-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+.block {
+  transform: translate(0);
+  opacity: 1;
+  transition: 1s;
+
+}
+/* About Section */
+.about {
+  margin-top: 100px;
+  
+}
+.about-section{
+  display: flex;
+  gap: 50px;
+}
+
+.about-img-3,
+.about-img-2 {
+  width: 80%;
+}
+
+.about-left {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.about-img-2{
+  position: relative;
+  top: 20%;
+}
+.about-img-3{
+  position: relative;
+  left: 20%;
+}
+.about-right{
+  margin-top: 50px;
+  width: 50%;
+}
+.secondary-title{
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  width: max-content;
+}
+.secondary-title::after{
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 110%;
+}
+.about-right h2{
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--dark-color);
+}
+.about-right h2 span{
+  color: var(--primary-color);
+}
+.about-right p{
+  margin-top: 20px;
+  color: #777;
+  font-weight: 400;
+}
+.number-section{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.number-section .number{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.number-section .number h4{
+  color: var(--primary-color);
+  font-size: 50px;
+  font-weight: 800;
+  border-left: 6px solid var(--primary-color);
+  padding-left: 20px;
+}
+.number-section .number h6{
+  color: #555;
+  font-size: 18px;
+  font-weight: 400;
+}
+.number-section .number h5{
+  color:var(--dark-color);
+  font-size: 15px;
+  font-weight: 700;
+}
+.about-right button{
+  margin-top: 40px;
+  border: 0;
+  outline: 0;
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 20px 45px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.about-right button:hover{
+  background: #ffb039;
+  transition: 1s;
+}
+@media screen and (max-width:1000px) {
+  .about-section{
+    flex-direction: column-reverse;
+  }
+  .about-left {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-right{
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width:600px) {
+  .number-section{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+}
+@media screen and (max-width:467px) {
+  .about-left{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-img-2{
+    top: 0;
   }
   
 }

@@ -20,11 +20,14 @@ closeMenu.addEventListener("click", function () {
 function handleStickyNav() {
   const header = document.querySelector(".nav-contact");
   const navbar = document.querySelector(".nav-bar");
+  const reHome = document.querySelector(".re-home");
 
   if (window.scrollY > header.offsetHeight) {
     navbar.classList.add("fixed");
+    reHome.classList.add("block");
   } else {
     navbar.classList.remove("fixed");
+    reHome.classList.remove("block");
   }
 }
 
@@ -33,3 +36,13 @@ window.addEventListener("scroll", handleStickyNav);
 
 // Initial setup
 handleStickyNav();
+
+
+
+function scrollToElement() {
+  // Get the target element
+  const targetElement = document.getElementById('targetElement');
+
+  // Scroll to the target element
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+}
