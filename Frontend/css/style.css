@@ -1483,3 +1483,71 @@ figure {
   }
 
 }
+
+.card-a {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.card-b {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.card-c {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 2s;
+}
+
+.card-d {
+  transform: scale(0.5);
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.card-x {
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.card-y {
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.card-z {
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 2s;
+}
+
+.card-p {
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 2.5s;
+}
+
+.card-img {
+  transform: scale(0.1) !important;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.not-see {
+  visibility: hidden;
+  transform: 1.5s;
+}
+
+.transform0 {
+  transform: translate(0) !important;
+  opacity: 1;
+}
+
+.see {
+  visibility: visible;
+}
