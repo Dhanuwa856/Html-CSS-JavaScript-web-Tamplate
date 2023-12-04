@@ -14,13 +14,14 @@
 </head>
 
 <body>
-  <button class="re-home" onclick="scrollToElement()"><i class="fa-solid fa-arrow-up"></i></button>
+  <!-- Re Home Button -->
+  <button class="re-home container-fluid" onclick="scrollToElement()"><i class="fa-solid fa-arrow-up"></i></button>
   <!-- Hero Section -->
   <div class="hero-bg">
     <div class="nav-contact" id="targetElement"></div>
     <div class="hero-bg-filter">
       <!-- Nav Bar -->
-      <nav class="nav-bar">
+      <nav class="nav-bar container-fluid">
         <div class="nav-logo">
           <span><i class="fa-solid fa-utensils"></i></span>
           <h2><a href="#" class="main-font">Restoran</a>
@@ -112,15 +113,15 @@
         <p class="main-font">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
           Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
         <div class="number-section">
-          <div class="number">
-            <h4 class="main-font">15</h4>
+          <div class="number counter">
+            <h4 class="main-font count" akhi="15">0</h4>
             <div>
               <h6 class="main-font">Years of</h6>
               <h5 class="main-font">EXPERIENCE</h5>
             </div>
           </div>
-          <div class="number">
-            <h4 class="main-font">50</h4>
+          <div class="number counter">
+            <h4 class="main-font count" akhi="50">0</h4>
             <div>
               <h6 class="main-font">Popular</h6>
               <h5 class="main-font">MASTER CHEFS</h5>
@@ -131,8 +132,191 @@
       </div>
     </div>
   </div>
+  <!-- Food Menu Section -->
+  <div class="container-fluid food-menu">
+    <div class="container">
+      <h4 class="special-font primary-title">Food Menu</h4>
+      <h2 class="main-font">Most Popular Items</h2>
+      <div class="menu-list">
+        <div class="menu-btns">
+          <button class="menu-btn active-btn" onclick="toggleCategory('category1'),toggleClass(this)">
+            <div><i class="fa-solid fa-mug-saucer"></i></div>
+            <div>
+              <h6 class="main-font">Popular</h6>
+              <p class="main-font">Breakfast</p>
+            </div>
+          </button>
+          <button class="menu-btn" onclick="toggleCategory('category2'),toggleClass(this)">
+            <div><i class="fa-solid fa-burger"></i></div>
+            <div>
+              <h6 class="main-font">Special</h6>
+              <p class="main-font">Launch</p>
+            </div>
+          </button>
+          <button class="menu-btn" onclick="toggleCategory('category3'),toggleClass(this)">
+            <div><i class="fa-solid fa-utensils"></i></div>
+            <div>
+              <h6 class="main-font">Lovely</h6>
+              <p class="main-font">Dinner</p>
+            </div>
+          </button>
+        </div>
+        <div class="menu-items active" id="category1Content">
+          <div class="menu-items-left">
+            <div class="menu-item">
+              <img src="image/menu-1.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+            <div class="menu-item category-content" id="category2Content">
+              <img src="image/menu-2.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+            <div class="menu-item">
+              <img src="image/menu-3.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+            <div class="menu-item">
+              <img src="image/menu-4.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="menu-items-right">
+            <div class="menu-item category-content" id="category3Content">
+              <img src="image/menu-5.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+
+            <div class="menu-item">
+              <img src="image/menu-6.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+            </div>
 
 
+            <div class="menu-item">
+              <img src="image/menu-7.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+            <div class="menu-item">
+              <img src="image/menu-8.jpg" alt="menu image">
+              <div class="menu-card">
+                <div class="name-price">
+                  <h6 class="main-font">Chicken Burger</h6>
+                  <p class="main-font">$155</p>
+                </div>
+                <hr>
+                <div class="menu-text main-font">
+                  Ipsum ipsum clita erat amet dolor justo diam
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Video Section -->
+  <div class="container-fluid video-section">
+    <div class="video-section-left">
+      <div class="video-img">
+        <img src="image/video.jpg" alt="">
+        <a class="play-btn" href="#"></a>
+      </div>
+    </div>
+    <div class="video-section-right">
+      <div class="video-section-right-content">
+        <div class="secondary-title special-font">Reservation</div>
+        <h3 class="main-font">Book A Table Online</h3>
+        <form action="#">
+          <div class="name-input">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="select-input">
+            <input type="datetime" name="" id="" placeholder="Date & Time" required>
+            <select name="" id="" required>
+              <option value="1">People 1</option>
+              <option value="1">People 2</option>
+              <option value="1">People 3</option>
+            </select>
+          </div>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Special Request"></textarea>
+          <button type="submit" class="main-font">BOOK NOW</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
 
 
   <!-- Link to js -->
