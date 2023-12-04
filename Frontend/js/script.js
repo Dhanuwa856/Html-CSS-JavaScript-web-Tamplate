@@ -84,3 +84,23 @@ function toggleCategory(category) {
   const selectedCategoryContent = document.getElementById(`${category}Content`);
   selectedCategoryContent.classList.add("active");
 }
+
+//autoScrollSection
+
+const autoScrollSection = document.getElementById("autoScrollSection");
+let scrollAmount = 1;
+
+function scrollSection() {
+  scrollAmount += 250;
+  autoScrollSection.scrollLeft = scrollAmount;
+
+  if (
+    scrollAmount >=
+    autoScrollSection.scrollWidth - autoScrollSection.clientWidth
+  ) {
+    scrollAmount = 1;
+    autoScrollSection.scrollLeft = true; // Reset scroll position
+  }
+}
+
+const scrollInterval = setInterval(scrollSection, 4000); // Adjust the interval time for scrolling speed
