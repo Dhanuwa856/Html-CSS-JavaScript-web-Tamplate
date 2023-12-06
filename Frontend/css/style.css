@@ -5,6 +5,22 @@
   --primary-color: #FEA116;
   --light-color: #F1F8FF;
   --dark-color: #0F172B;
+  color-scheme: dark light;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --light-color: #ddd;
+  }
+
+  .dark-mode {
+    color: #fff !important;
+  }
+
+  .dark-mode2 {
+    color: #0F172B;
+  }
+
 }
 
 /* CSS Reset */
@@ -1126,6 +1142,7 @@ textarea {
 .members-boxes {
   display: flex;
   gap: 15px;
+  margin-top: 50px;
 }
 
 .member-box {
